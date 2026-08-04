@@ -1,0 +1,92 @@
+:root {
+  /* Brand palette */
+  --color-primary: #2f4f6f;
+  --color-primary-contrast: #ffffff;
+  --color-background: #f3f5f7;
+  --color-surface: #ffffff;
+  --color-border: #d6dce2;
+  --color-text: #1e2933;
+  --color-text-muted: #5f6b76;
+  --color-accent: #1f9d6a;
+  --color-accent-contrast: #ffffff;
+
+  /* Feedback */
+  --color-success: #1f9d6a;
+  --color-warning: #d4a017;
+  --color-danger: #d64545;
+
+  /* Spacing and radius */
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.5rem;
+  --space-6: 2rem;
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 14px;
+
+  /* Shadow */
+  --shadow-sm: 0 1px 2px rgb(0 0 0 / 8%);
+  --shadow-md: 0 8px 20px rgb(22 34 51 / 10%);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#app {
+  width: 100%;
+  min-height: 100vh;
+}
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: var(--color-background);
+  color: var(--color-text);
+}
+
+a {
+  color: inherit;
+}
+
+.app-shell {
+  width: 100%;
+  min-height: 100vh;
+  background-color: var(--color-background);
+}
+
+.app-sidebar {
+  flex: 0 0 260px;
+  width: 260px;
+  max-width: 260px;
+  transition: width 0.2s ease, flex-basis 0.2s ease;
+  overflow: hidden;
+}
+
+.app-sidebar.collapsed {
+  flex-basis: 78px;
+  width: 78px;
+  max-width: 78px;
+}
+
+.sidebar-brand,
+.sidebar-label {
+  transition: opacity 0.15s ease;
+}
+
+.app-sidebar.collapsed .sidebar-brand,
+.app-sidebar.collapsed .sidebar-label {
+  opacity: 0;
+}
+
+.app-sidebar.collapsed .nav-link {
+  min-height: 42px;
+}
+
+.app-main {
+  min-width: 0;
+}

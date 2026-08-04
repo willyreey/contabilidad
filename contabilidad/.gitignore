@@ -22,3 +22,20 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Laravel
+/vendor
+/storage/*.key
+/storage/pail
+/bootstrap/cache/*.php
+!bootstrap/cache/.gitignore
+.env
+.env.backup
+.env.production
+.phpunit.result.cache
+/public/build
+/public/hot
+/public/storage
+Homestead.json
+Homestead.yaml
+auth.json
